@@ -98,3 +98,6 @@ create a controller file for the user
 use asyn await to connect to the database
 
 
+## add swaggger to the project
+
+npm install @nestjs/swagger swagger-ui-express

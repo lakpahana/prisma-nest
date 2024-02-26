@@ -2,6 +2,7 @@
 import { Injectable } from '@nestjs/common';
 import { Prisma } from '@prisma/client';
 import { DatabaseService } from 'src/database/database.service';
+import { CreateEmployeeDto } from './employees.entities';
 
 @Injectable()
 export class EmployeesService {
@@ -9,7 +10,7 @@ export class EmployeesService {
     private readonly databaseService: DatabaseService,
   ) { }
 
-  async create(createEmployeeDto: Prisma.EmployeeCreateInput) {
+  async create(createEmployeeDto: CreateEmployeeDto) {
     return this.databaseService.employee.create({ data: createEmployeeDto });
   }
 
